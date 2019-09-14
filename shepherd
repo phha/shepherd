@@ -55,9 +55,9 @@ main() {
   [[ "$blacklist" != "" ]] && echo "Excluding services: $blacklist"
 
   while true; do
-    update_services "$blacklist" "$supports_detach_option" "$supports_registry_auth"
     echo "Sleeping $sleep_time before next update"
     sleep "$sleep_time"
+    update_services "$blacklist" "$supports_detach_option" "$supports_registry_auth"
   done
 }
 
